@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.PhieuMuonUpdateBottomSheet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@drawable/background2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã thủ thư"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_update_matt"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã thành viên"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_update_matv"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã Sách"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_update_masach"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trạng thái"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textAlignment="center"
+
+                    android:id="@+id/phieumuon_update_trangthai"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_marginVertical="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#2EA2FF"
+                        android:layout_height="30dp"
+                        android:text="Giá thuê"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="50dp"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:id="@+id/phieumuon_update_giatien"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:text="2023/02/02"
+                    android:id="@+id/phieumuon_update_ngay"/>
+                <Button
+                    android:id="@+id/phieumuon_update_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="update phiếu mượn" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

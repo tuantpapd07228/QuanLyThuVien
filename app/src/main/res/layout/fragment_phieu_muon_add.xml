@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.PhieuMuonAddFragment">
+<!--    int maPM, String maTT, int maTV, int maSach, Date ngay, int tienThue, int traSach-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="480dp"
+                android:background="@drawable/background2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã thủ thư"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_add_matt"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã thành viên"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_add_matv"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mã Sách"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#2EA2FF"/>
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/phieumuon_add_masach"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_marginVertical="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#2EA2FF"
+                        android:layout_height="30dp"
+                        android:text="gia thue"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="50dp"
+                        android:textSize="18sp"
+                        android:paddingVertical="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:id="@+id/phieumuon_add_giatien"/>
+                </LinearLayout>
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:gravity="center"
+                    android:text="2023/02/02"
+                android:id="@+id/phieumuon_add_ngay"/>
+                <Button
+                    android:id="@+id/phieumuon_add_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:text="Thêm phiếu mượn" />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

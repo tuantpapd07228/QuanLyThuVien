@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_phieumuon"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Quản lý phiếu mượn"/>
+        <item android:id="@+id/nav_loai_sach"
+            android:icon="@drawable/cateicon"
+            android:title="Quản lý loại sách"/>
+        <item android:id="@+id/nav_sach"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="Quản lý sách"/>
+        <item android:id="@+id/nav_thanh_vien"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Quản lý thành viên"/>
+
+        <item android:title="Thống kê" >
+            <menu>
+                <item android:id="@+id/subtop"
+                    android:icon="@drawable/baseline_airline_stops_24"
+                    android:title="10 sách mượn nhiều nhất"/>
+                <item
+                    android:id="@+id/subdoanhthu"
+                    android:title="Doanh thu"
+                    android:icon="@drawable/baseline_attach_money_24"/>
+            </menu>
+        </item>
+        <item android:title="Khác" >
+            <menu>
+                <item android:id="@+id/nav_themthuthu"
+                    android:icon="@drawable/baseline_home_24"
+                    android:title="Thêm thủ thư"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/baseline_logout_24"/>
+            </menu>
+        </item>
+    </group>
+</menu>
