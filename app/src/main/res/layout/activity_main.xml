@@ -17,10 +17,162 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <FrameLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/flCotent"/>
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/flCotent">
+
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/home_linealayoutchinh"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="192dp"
+                    android:src="@drawable/logo"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="100">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_marginBottom="20dp"
+
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/home_thanhvien">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/emone"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Thành viên"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+
+                            android:orientation="vertical"
+                            android:id="@+id/home_admin">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/baseline_auto_stories_24"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Top sách"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/home_loaisach">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/baseline_menu_book_24"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Loại sách"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_weight="50"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical"
+                            android:id="@+id/home_sach">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/bookicon"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Sách"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="20dp"
+
+                            android:orientation="vertical"
+                            android:id="@+id/home_quanlyphieumuon">
+                            <ImageView
+                                android:layout_width="100dp"
+
+                                android:layout_height="100dp"
+                                android:src="@drawable/baseline_playlist_add_check_24"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Phiếu mượn"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:id="@+id/home_doanhthu">
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/hdicon"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:text="Doanh thu"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"

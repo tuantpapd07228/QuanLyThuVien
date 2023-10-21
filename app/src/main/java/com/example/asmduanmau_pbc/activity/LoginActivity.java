@@ -23,14 +23,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         thuThuDAO = new ThuThuDAO(getApplicationContext());
 
-        try {
-            thuThuDAO.insert(new ThuThu("admin" , "nguyen van a", "fpt123"));
-            thuThuDAO.insert(new ThuThu("admin1" , "nguyen van b", "fpt123"));
-            thuThuDAO.insert(new ThuThu("admin2" , "nguyen van c", "fpt123"));
-            thuThuDAO.insert(new ThuThu("admin3" , "nguyen van d", "fpt123"));
-        }catch (Exception e){
-
-        }
+//        try {
+//            thuThuDAO.insert(new ThuThu("admin" , "nguyen van a", "fpt123"));
+//            thuThuDAO.insert(new ThuThu("admin1" , "nguyen van b", "fpt123"));
+//            thuThuDAO.insert(new ThuThu("admin2" , "nguyen van c", "fpt123"));
+//            thuThuDAO.insert(new ThuThu("admin3" , "nguyen van d", "fpt123"));
+//        }catch (Exception e){
+//
+//        }
         setUSPW();
         setButton();
 

@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.asmduanmau_pbc.R;
@@ -31,6 +32,7 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     ThuThuDAO thuThuDAO;
+    LinearLayout doanhthu, phieumuon, topSach, thanhvien, sach ,loaisach;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +41,67 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
 
-
-
-
+        doanhthu = findViewById(R.id.home_doanhthu);
+        phieumuon = findViewById(R.id.home_quanlyphieumuon);
+        thanhvien = findViewById(R.id.home_thanhvien);
+        topSach = findViewById(R.id.home_admin);
+        sach =findViewById(R.id.home_sach);
+        loaisach = findViewById(R.id.home_loaisach);
+        //
+        loaisach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Loại Sách");
+                Fragment f = new LoaiSachFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
+        sach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Sách");
+                Fragment f = new SachFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
+        topSach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Top Sách Được thuê");
+                Fragment f = new TopFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
+        thanhvien.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Thành viên");
+                Fragment f = new ThanhVienFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
+        doanhthu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Doanh thu");
+                Fragment f = new DoanhThuFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
+        phieumuon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                toolbar.setTitle("Phiếu mượn");
+                Fragment f = new PhieuMuonFragment();
+                binding.homeLinealayoutchinh.setVisibility(View.GONE);
+                replaceFragment(f);
+            }
+        });
 
 
 
@@ -74,8 +134,6 @@ public class MainActivity extends AppCompatActivity {
         binding.drawablelayout.addDrawerListener(toggle);
         toolbar.setTitle("Trang chủ");
 
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(R.id.flCotent, new PhieuMuonFragment()).commit();
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -108,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
 
-
+                    binding.homeLinealayoutchinh.setVisibility(View.GONE);
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.flCotent, fragment);
                     fragmentTransaction.commit();
@@ -123,5 +181,9 @@ public class MainActivity extends AppCompatActivity {
 //        fragmentTransaction.add(R.id.framelayout, new TrangChuFragment()).commit();
 
 
+    }
+    private void replaceFragment(Fragment fragment){
+        FragmentTransaction f = getSupportFragmentManager().beginTransaction();
+        f.replace(R.id.flCotent, fragment).commit();
     }
 }
